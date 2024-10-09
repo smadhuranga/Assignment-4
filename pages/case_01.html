@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case 01</title>
+
+    <link rel="icon" href="/assets/images/logo.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .slide {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        background-color: blueviolet;
+        width: 200px;
+        height: 50px;
+        box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.7);
+        position: relative;
+        left: -170px;
+        transition: transform 1s ease-in-out;
+        font-size: 1.2rem;
+        color: white;
+      }
+
+      .slide:hover {
+        cursor: pointer;
+        transform: translateX(170px);
+      }
+
+      .text {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="slide">
+        <p class="text">Menu One</p>
+        <i class="fa-solid fa-address-book fa-xl"></i>
+      </div>
+
+      <div class="slide">
+        <p class="text">Menu Two</p>
+        <i class="fa-solid fa-truck-medical fa-xl"></i>
+      </div>
+
+      <div class="slide">
+        <p class="text">Menu Three</p>
+        <i class="fa-solid fa-book-atlas fa-xl"></i>
+      </div>
+
+      <div class="slide">
+        <p class="text">Menu Four</p>
+        <i class="fa-solid fa-layer-group fa-xl"></i>
+      </div>
+
+      <div class="slide">
+        <p class="text">Menu Five</p>
+        <i class="fa-solid fa-cart-arrow-down fa-xl"></i>
+      </div>
+    </div>
+  </body>
+</html>

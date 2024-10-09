@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case 02</title>
+
+    <link rel="icon" href="/assets/images/logo.png" />
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        background-color: #194de7;
+      }
+
+      .circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+      }
+
+      #circle-1 {
+        border: 20px solid #fff;
+        border-top-color: #ff3041;
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      #circle-2 {
+        background-color: grey;
+        font-size: 2.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        position: absolute;
+      }
+
+      #circle-1:hover {
+        animation: loading 1.3s linear 1;
+      }
+
+      @keyframes loading {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle" id="circle-1"></div>
+      <div class="circle" id="circle-2">
+        <p>RWAD</p>
+      </div>
+    </div>
+  </body>
+</html>

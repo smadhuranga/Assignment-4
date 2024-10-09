@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case 03</title>
+
+    <link rel="icon" href="/assets/images/logo.png" />
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        /* background-color: wheat; */
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: #f15641;
+        border-radius: 15px;
+        animation: rotate 10s ease infinite;
+      }
+
+      @keyframes rotate {
+        0%,
+        100% {
+          transform: translate(0, 0);
+          background-color: #2939d9;
+        }
+
+        12.5%,
+        87.5% {
+          transform: translate(calc(100vw - 240px), 0) rotate(180deg);
+          background-color: #fff000;
+        }
+
+        25%,
+        75% {
+          transform: translate(calc(100vw - 240px), calc(100vh - 160px))
+            rotate(360deg);
+          background-color: #cd1400;
+        }
+
+        37.5%,
+        62.5% {
+          transform: translate(0, calc(100vh - 160px)) rotate(180deg);
+          background-color: #cf2a77;
+        }
+
+        50% {
+          transform: translate(0, 0) rotate(360deg);
+          background-color: #ffa500;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

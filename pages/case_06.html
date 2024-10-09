@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case 06 - Improved</title>
+
+    <link rel="icon" href="/assets/images/logo.png" />
+
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .container {
+        background-color: wheat;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .sky {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        position: relative;
+      }
+
+      .road {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 400%;
+        height: 40vh;
+        animation: left-right 5s linear infinite 1s;
+      }
+
+      .road img,
+      .city img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .city {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 400%;
+        height: 30vh;
+        left: 0;
+        bottom: 40vh;
+        animation: left-right 5s linear infinite 1s;
+      }
+
+      .car {
+        width: 25vw;
+        height: auto;
+        position: absolute;
+        bottom: 25%;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, 0);
+      }
+
+      .wheel {
+        width: 4.8vw;
+        height: auto;
+        position: absolute;
+        bottom: 25.3%;
+        animation: rotate 5s linear infinite 1s;
+      }
+
+      #wheel-1 {
+        left: 39.5%;
+      }
+
+      #wheel-2 {
+        left: 54.9%;
+      }
+
+      @keyframes left-right {
+        0% {
+          transform: translateX(0);
+        }
+
+        70% {
+          transform: translateX(-70%);
+        }
+
+        90% {
+          transform: translateX(-80%);
+        }
+
+        100% {
+          transform: translateX(-80%);
+        }
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        70% {
+          transform: rotate(-720deg);
+        }
+
+        90% {
+          transform: rotate(-540deg);
+        }
+
+        100% {
+          transform: rotate(-540deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="/asserts/photos/sky.jpg" alt="sky" class="sky" />
+
+      <div class="city">
+        <img src="/asserts/photos/city.png" alt="city image" />
+        <img src="/asserts/photos/city.png" alt="city image" />
+        <img src="/asserts/photos/city.png" alt="city image" />
+        <img src="/asserts/photos/city.png" alt="city image" />
+        <img src="/asserts/photos/city.png" alt="city image" />
+        <img src="/asserts/photos/city.png" alt="city image" />
+      </div>
+
+      <div class="road">
+        <img src="/asserts/photos/road.jpg" alt="" />
+        <img src="/asserts/photos/road.jpg" alt="" />
+      </div>
+
+      <img src="/asserts/photos/car.png" alt="car image" class="car" />
+
+      <img
+        src="/asserts/photos/wheel.png"
+        alt="wheel image"
+        class="wheel"
+        id="wheel-1"
+      />
+
+      <img
+        src="/asserts/photos/wheel.png"
+        alt="wheel image"
+        class="wheel"
+        id="wheel-2"
+      />
+    </div>
+  </body>
+</html>
